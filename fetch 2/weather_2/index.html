@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather_2</title>
+    <link rel="stylesheet" href="weather.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="nav_bar">
+      <div>
+        <input type="text" id="city" placeholder="Type your city/state Name" />
+        <button onclick="search()">Search</button>
+      </div>
+    </div>
+    <div id="main_content">
+      <div id="screen">
+        <div id="myCity">
+          <img src="pngwing.com.png" alt="" />
+          <h1>_______</h1>
+        </div>
+
+        <div id="details">
+          <table>
+            <tr>
+              <td><b>Temperature</b></td>
+              <td>
+                <table>
+                  <tr>
+                    <td class="red"><b>Max-temp</b></td>
+                    <td>____</td>
+                  </tr>
+                  <tr>
+                    <td class="green"><b>Min-temp</b></td>
+                    <td>____</td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <tr>
+              <td><b>Wind</b></td>
+              <td>________</td>
+            </tr>
+            <tr>
+              <td><b>Clouds</b></td>
+              <td>________</td>
+            </tr>
+            <tr>
+              <td><b>Sunrise</b></td>
+              <td>________</td>
+            </tr>
+            <tr>
+              <td><b>Sunset</b></td>
+              <td>________</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+      <div id="map">
+        <div class="mapouter">
+          <div class="gmap_canvas">
+            <iframe
+              width="709"
+              height="500"
+              id="gmap_canvas"
+              src="https://maps.google.com/maps?q=gandhinagar&t=&z=13&ie=UTF8&iwloc=&output=embed"
+              frameborder="0"
+              scrolling="no"
+              marginheight="0"
+              marginwidth="0"
+            >
+            </iframe>
+            <a href="https://embedgooglemap.net/124/"> </a>
+            <br />
+            <style>
+              .mapouter {
+                position: relative;
+                text-align: right;
+                height: 500px;
+                width: 709px;
+              }
+            </style>
+            <a href="https://www.embedgooglemap.net"> </a>
+            <style>
+              .gmap_canvas {
+                overflow: hidden;
+                background: none !important;
+                height: 500px;
+                width: 709px;
+              }
+            </style>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="forCast">
+      
+    </div>
+  </body>
+  <script src="weather.js"></script>
+</html>

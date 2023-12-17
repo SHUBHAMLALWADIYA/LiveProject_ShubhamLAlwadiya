@@ -1,0 +1,29 @@
+{
+  "todo": [
+    {
+      "taskName": "task1",
+      "status": false,
+      "id": 1
+    },
+    {
+      "taskName": "\"Learn HTML\"",
+      "status": false,
+      "id": 2
+    },
+    {
+      "taskName": "\"Learn CSS\"",
+      "status": false,
+      "id": 3
+    },
+    {
+      "taskName": "Learn JAVA",
+      "status": false,
+      "id": 4
+    },
+    {
+      "taskName": "My Daily acrivity",
+      "status": false,
+      "id": 5
+    }
+  ]
+}
