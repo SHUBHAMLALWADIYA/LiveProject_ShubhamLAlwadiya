@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<style>
+
+#container{
+    width: fit-content;
+    margin: auto;
+    padding: 20px;
+    background-color: rgb(50, 87, 87);
+    margin-top: 100px;
+    border-radius: 10px;
+
+}
+input{
+    width:250px;
+    font-size: 15px;
+    padding: 5px;
+}
+button{
+    margin-top: 20px;
+}
+h2{
+    color: azure;
+}
+h1{
+    color: aliceblue;
+    text-align: center;
+}
+
+</style>
+<body>
+    <div id="container">
+        <h1>Login</h1>
+        <h2>Email</h2>
+        <input type="email" placeholder="Your Email" id="inp1" required>
+        <h2>Password</h2>
+        <input type="password" placeholder="Your Password" id="inp2" required>
+        <br>
+        <button onclick="login()">Submit</button>
+    </div>
+</body>
+
+<script>
+
+let signin=document.getElementById("container");
+let myForm=document.getElementById("form");
+let emailINP=document.getElementById("inp1");
+let passwordINP=document.getElementById("inp2");
+
+
+
+
+function login(){
+
+    let email=document.getElementById("inp1").value;
+    let myPassword=document.getElementById("inp2").value;
+    
+    
+    let newObj=localStorage.getItem(email);
+    newObj=JSON.parse(newObj)
+
+    if(newObj.password==myPassword){
+
+        location.href="home.html";
+
+    }
+    else{
+        alert("Your Password or Email is not Matched ");
+    }
+
+}
+
+
+
+</script>
+
+</html>

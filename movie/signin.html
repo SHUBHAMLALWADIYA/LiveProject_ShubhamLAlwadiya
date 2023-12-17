@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign in Page</title>
+</head>
+<style>
+
+#container{
+    width: fit-content;
+    margin: auto;
+    padding: 20px;
+    background-color: rgb(50, 87, 87);
+    margin-top: 100px;
+    border-radius: 10px;
+
+}
+input{
+    width:250px;
+    font-size: 15px;
+    padding: 5px;
+}
+button{
+    margin-top: 20px;
+}
+h2{
+    color: azure;
+}
+h1{
+    color: aliceblue;
+}
+u{
+    color: rgb(69, 240, 186);
+}
+
+</style>
+<body>
+    <form id="form">
+
+        <div id="container">
+        
+            <u><h1>Sign-In</h1></u>
+            <h2>Usear Name</h2>
+            <input type="text" placeholder="your Name" id="inp1" required>
+            <h2>email</h2>
+            <input type="email" placeholder="your email" id="inp2" required>
+            <h2>Password</h2>
+            <input type="password" placeholder="your Password" id="inp3" required>
+            <br>
+            <button type="submit">Submit</button>
+    
+        </div>
+
+
+    </form>
+    
+</body>
+<script>
+
+let signin=document.getElementById("container");
+let myForm=document.getElementById("form");
+let emailINP=document.getElementById("inp2");
+let passwordINP=document.getElementById("inp3");
+let usearNameINP=document.getElementById("inp1");
+
+
+
+myForm.addEventListener("submit",function(e){
+
+    e.preventDefault();
+
+    let email=document.getElementById("inp2").value;
+    let password=document.getElementById("inp3").value;
+    let usearName=document.getElementById("inp1").value;
+    
+if(email==="" && password==="" && !password && usearName===""){
+    alert("Please fill all Details");
+}
+else{
+
+    let obj={"password":password}
+    localStorage.setItem(email,JSON.stringify(obj)) 
+
+    myForm.reset();
+
+    location.href="index.html";
+}
+
+   
+
+})
+
+</script>
+</html>
